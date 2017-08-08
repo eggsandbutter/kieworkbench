@@ -1,0 +1,11 @@
+package myorganization.myproject.rules;
+
+rule "MY FIRST PROCESS RULE"
+
+    ruleflow-group "all"
+    when
+        myorganization.myproject.bom.MyObject( myID == 0 )
+    then
+        System.out.println("MY ID IS 0");
+        
+end
