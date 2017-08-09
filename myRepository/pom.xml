@@ -4,11 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>myOrganization</groupId>
   <artifactId>myRepository</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.5</version>
   <packaging>pom</packaging>
   <name>myRepository</name>
   <modules>
-    <module>myProject</module>
     <module>myProject</module>
   </modules>
   <repositories>

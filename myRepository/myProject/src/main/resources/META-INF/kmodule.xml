@@ -4,5 +4,6 @@
   </kbase>
   <kbase name="statelessRules" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="myorganization.myproject.rules">
     <ksession name="kieSessionStateless" type="stateless" default="false" clockType="realtime"/>
+    <ksession name="kieSessionStateful" type="stateful" default="false" clockType="realtime"/>
   </kbase>
 </kmodule>

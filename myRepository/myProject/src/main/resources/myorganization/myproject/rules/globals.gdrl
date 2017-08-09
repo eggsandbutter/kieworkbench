@@ -1,0 +1,3 @@
+package myorganization.myproject.rules;
+
+global java.util.ArrayList globalList;

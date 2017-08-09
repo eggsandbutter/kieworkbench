@@ -1,0 +1,54 @@
+<scenario>
+  <name>StatelessTest.scenario</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals>
+    <fact-data>
+      <type>ArrayList</type>
+      <fieldData/>
+      <name>globalList</name>
+      <isModify>false</isModify>
+    </fact-data>
+  </globals>
+  <fixtures>
+    <fact-data>
+      <type>MyObject</type>
+      <fieldData>
+        <field-data>
+          <name>myID</name>
+          <value>0</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>$myObject</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace>
+      <executionTimeResult>8</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
+    <expect-rule>
+      <ruleName>MY FIRST RULE</ruleName>
+      <explanation>Rule [MY FIRST RULE] was activated 1 times.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
+  </fixtures>
+  <lastRunResult>2017-08-09 14:23:31.544 UTC</lastRunResult>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>myorganization.myproject.rules</packageName>
+  <imports>
+    <imports>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>myorganization.myproject.bom.MyObject</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>java.util.ArrayList</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+    </imports>
+  </imports>
+  <ksessions>
+    <string>kieSessionStateful</string>
+  </ksessions>
+</scenario>

@@ -1,10 +1,29 @@
 package myorganization.myproject.rules;
 
+global java.util.ArrayList globalList;
+
 rule "MY FIRST RULE"
 
     when
         myorganization.myproject.bom.MyObject( myID == 0 )
     then
+        myorganization.myproject.bom.GlobalResponses globalResponses = new myorganization.myproject.bom.GlobalResponses();
+        globalResponses.setRuleName("MY FIRST RULE");
+        globalResponses.setRuleResponse("MY ID IS 0");
+        globalList.add(globalResponses);
         System.out.println("MY ID IS 0");
+        
+end
+
+rule "MY SECOND RULE"
+
+    when
+        not myorganization.myproject.bom.MyObject( )
+    then
+        myorganization.myproject.bom.GlobalResponses globalResponses = new myorganization.myproject.bom.GlobalResponses();
+        globalResponses.setRuleName("MY SECOND RULE");
+        globalResponses.setRuleResponse("THERE IS NO MY OBJECT");
+        globalList.add(globalResponses);
+        System.out.println("THERE IS NO MY OBJECT");
         
 end

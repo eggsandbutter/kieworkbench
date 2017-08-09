@@ -1,13 +1,12 @@
-package myorganization.myproject.rules;
+package myorganization.myproject.process;
 
-rule "MY FIRST PROCESS RULE"
-    
+rule "MY SECOND PROCESS RULE"
+    no-loop true
     ruleflow-group "all"
-    no-loop
     when
         $myObject : myorganization.myproject.bom.MyObject( myID == 0 )
     then
-        System.out.println("MY FIRST PROCESS RULE");
+        System.out.println("MY SECOND PROCESS RULE");
         System.out.println("AN OBJECT WITHOUT DESCRIPTION");
         $myObject.setMyDescription("AN OBJECT WITHOUT DESCRIPTION");
         update($myObject);
