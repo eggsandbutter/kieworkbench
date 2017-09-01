@@ -2,6 +2,17 @@ package myorganization.myproject.rules;
 
 global java.util.ArrayList globalList;
 
+rule "WHAT DATA DOES THIS HAVE"
+
+    when
+        myorganization.myproject.bom.MyObject( $myDate : myDate, $myDescription : myDescription, $myID : myID)
+    then
+        System.out.println("$myDate : "+$myDate);
+        System.out.println("$myDescription : "+$myDescription);
+        System.out.println("$myID : "+$myID);
+        
+end
+
 rule "MY FIRST RULE"
 
     when
@@ -12,18 +23,5 @@ rule "MY FIRST RULE"
         globalResponses.setRuleResponse("MY ID IS 0");
         globalList.add(globalResponses);
         System.out.println("MY ID IS 0");
-        
-end
-
-rule "MY SECOND RULE"
-
-    when
-        not myorganization.myproject.bom.MyObject( )
-    then
-        myorganization.myproject.bom.GlobalResponses globalResponses = new myorganization.myproject.bom.GlobalResponses();
-        globalResponses.setRuleName("MY SECOND RULE");
-        globalResponses.setRuleResponse("THERE IS NO MY OBJECT");
-        globalList.add(globalResponses);
-        System.out.println("THERE IS NO MY OBJECT");
         
 end

@@ -12,6 +12,8 @@ public class MyObject implements java.io.Serializable
    private int myID;
    private java.lang.String myDescription;
 
+   private java.util.Date myDate;
+
    public MyObject()
    {
    }
@@ -36,10 +38,21 @@ public class MyObject implements java.io.Serializable
       this.myDescription = myDescription;
    }
 
-   public MyObject(int myID, java.lang.String myDescription)
+   public java.util.Date getMyDate()
+   {
+      return this.myDate;
+   }
+
+   public void setMyDate(java.util.Date myDate)
+   {
+      this.myDate = myDate;
+   }
+
+   public MyObject(int myID, java.lang.String myDescription, java.util.Date myDate)
    {
       this.myID = myID;
       this.myDescription = myDescription;
+      this.myDate = myDate;
    }
 
 }
